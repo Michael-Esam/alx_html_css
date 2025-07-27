@@ -10,6 +10,7 @@ main{
 article{
     flex: 2;
     overflow-y: auto;
+    color:rgb(105, 85, 85)
 }
 
 aside{
