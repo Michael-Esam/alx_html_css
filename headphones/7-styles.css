@@ -1,0 +1,386 @@
+*{
+    box-sizing: border-box;
+    font-family: "Source Sans Pro", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --main-color: #FF6565;
+    --hover-ops: opacity: 0.9;
+    --text-color:#FFFFFF;
+}
+.home{
+    background-image: url(images/headphones_hero_1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    height: fit-content;
+    align-items: center;
+    position: relative;
+}
+header > .list {
+    display: none;
+}
+.logo img{
+    height: 32px;
+}
+.home ul {
+    display: flex;
+    list-style: none;
+}
+
+.home ul a {
+ color:white ;
+ text-decoration: none;
+ margin-right: 20px;
+ font-size: 12px;
+ transition: .5s;
+}
+
+.home ul > li a:hover{
+color: var(--main-color);
+opacity: var(--hover-ops);
+box-shadow: none;
+}
+
+.sec-one{
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+        color: white;
+}
+.sec-one div{
+    margin-top: 75px;
+}
+.sec-one div h3{
+    font-size: 32px;
+}
+.sec-one div p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.sec-one button{
+    background-color: var(--main-color);
+    cursor: pointer;
+    margin: 50px;
+    border-radius: 50px;
+    color: white;
+    padding: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+ transition: .5s;
+}
+.sec-one > p{
+    max-width: 637px;
+    line-height: 2.6;
+    padding: 10px;
+}
+
+@media (max-width:480px){
+    header {
+            flex-direction: column;
+        }
+        .home ul{
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-top: 15px;
+        display: none;
+        transition: .2s;
+    }    
+    .home ul a{
+        text-align: center;
+        margin-right: 0px;
+    }    
+    header .list {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 5px;
+        transition: .2s;
+    }
+    header .list div{
+        width: 18px;
+        height: 2px;
+        background-color: white;
+        border-radius: 50px;
+        transition: .2s;
+    }
+    header .list .mid{
+        margin: 5px 0;
+        width: 13px;
+    }
+    header .list:focus + ul{
+        display: flex;
+    }
+    header .list:focus .one {
+       transform: rotate(135deg);
+    }
+    header .list:focus .mid {
+       display: none;
+    }
+    header .list:focus{
+        top:25px
+    }
+    header .list:focus .two {
+        transform: rotate(-135deg) translate(1px, 1px);
+    }
+}
+
+.sec-two{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+h2{
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+.sec-two > p{
+    margin-top: 50px;
+    max-width: 637px;
+    line-height: 2.6;
+    text-align: center;
+    padding: 15px;
+}
+.sec-two .cont-one{
+    display: grid;
+    justify-content:space-evenly;
+    grid-template-columns: repeat(4,20%);
+    padding: 20px;
+    gap: 20px;
+}
+
+.sec-two .cont-one > div{
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 6px;
+    transition: .5s;
+}
+
+.sec-two .cont-one > div:hover{
+    box-shadow: 0px 0px 20px 0px #a8a8a8de;
+    transform: translateY(-10px);
+}
+
+.sec-two .cont-one > div span{
+    color: var(--main-color);
+    font-size: 80px;
+}
+.sec-two .cont-one > div p{
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 2.6;
+}
+
+@media (max-width:1000px){
+    .sec-two .cont-one{
+        margin-top: 15px;
+        grid-template-columns: repeat(2,40%);
+    }
+}
+@media (max-width:480px){
+    .sec-two .cont-one{
+        grid-template-columns: repeat(1,90%);
+    }
+}
+
+
+.sec-three{
+    background-image: url(images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+.sec-three > p{
+    margin-top: 50px;
+    max-width: 637px;
+    line-height: 2.6;
+    text-align: center;
+}
+.sec-three .cont-two{
+    display: grid;
+    justify-content:space-evenly;
+    grid-template-columns: repeat(4,190px);
+    padding: 20px;
+    gap: 60px;
+}
+
+.sec-three .cont-two > div{
+    text-align: center;
+    background-size: 190px;
+    position: relative;
+    background-repeat: no-repeat;
+    padding: 15px 25px;
+    transition: .5s;
+    z-index: 10;
+}
+
+  .sec-three .cont-two > div::after {
+    content: "";
+    transform: translate(-50% ,-50%);
+    top: 35%;
+    left: 50%;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background: var(--main-color);
+    -webkit-clip-path: polygon(50% 0%, 95% 35%, 78% 90%, 22% 90%, 5% 35%);
+    clip-path: polygon(50% 0%, 95% 35%, 78% 90%, 22% 90%, 5% 35%);
+    margin: 40px auto;
+    z-index: -1;
+    transition: .8s;
+  }
+  .sec-three .cont-two > div:hover::after{
+    transform: translate(-50% ,-50%) rotate(360deg);
+  }
+.sec-three .cont-two > div h3{
+    margin-top: 45px;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+
+.sec-three .cont-two > div p{
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media (max-width:1000px){
+    .sec-three {
+        padding-bottom: 15px;
+    }
+    .sec-three .cont-two{
+        margin-top: 15px;
+        grid-template-columns: repeat(2,190px);
+    }
+    .sec-three > p{
+        padding: 15px;
+    }
+}
+@media (max-width:480px){
+    .sec-three .cont-two{
+        grid-template-columns: repeat(1,190px);
+    }
+}
+
+.sec-four{
+    background-color: white;
+    padding: 90px 0px;
+    text-align: center;
+}
+
+.sec-four h2{
+    color: black;
+    margin: 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form input{
+    border: none;
+    border-bottom:solid #0716293f 2px ;
+    padding: 20px;
+    width: 90%;
+    max-width: 335px;
+    margin-top:40px ;
+}
+
+form input::placeholder{
+    color: rgb(168, 168, 168);
+    font-size: 14px;
+}
+
+form input:focus{
+    outline: none;
+    caret-color: var(--main-color);
+    box-shadow: none;
+}
+
+form button{
+    background-color: var(--main-color);
+    cursor: pointer;
+    margin: 50px;
+    border-radius: 50px;
+    color: white;
+    padding: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+ transition: .5s;
+}
+
+button:hover{
+    background-color: #af4444;
+}
+
+footer{
+    background-color: #071629;
+    padding: 70px 20px 20px;
+    color: white;
+}
+
+footer .cont-three{
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .so{
+    display: flex;
+    gap: 15px;
+}
+footer .so span{
+    font-size: 40px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+footer .so span:hover{
+    color: var(--main-color);
+}
+
+footer p{
+    text-align: center;
+    font-size: 12px;
+    margin: 0;
+    color: #FFFFFF;
+}
+
+@media (max-width:480px){
+    footer{
+        padding: 50px 20px 20px;
+    }
+    footer .cont-three{
+        display: flex;
+        flex-direction:column ;
+        justify-content: space-between;
+        gap: 40px;
+        align-items: center;
+    }    
+}

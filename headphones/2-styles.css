@@ -46,9 +46,10 @@ header > .list {
  transition: .5s;
 }
 
-.home ul a:hover{
+.home ul > li a:hover{
 color: var(--main-color);
 opacity: var(--hover-ops);
+box-shadow: none;
 }
 
 .sec-one{
@@ -136,5 +137,130 @@ opacity: var(--hover-ops);
     }
     header .list:focus .two {
         transform: rotate(-135deg) translate(1px, 1px);
+    }
+}
+
+.sec-two{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+h2{
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+.sec-two > p{
+    margin-top: 50px;
+    max-width: 637px;
+    line-height: 2.6;
+    text-align: center;
+    padding: 15px;
+}
+.sec-two .cont-one{
+    display: grid;
+    justify-content:space-evenly;
+    grid-template-columns: repeat(4,20%);
+    padding: 20px;
+    gap: 20px;
+}
+
+.sec-two .cont-one > div{
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 6px;
+    transition: .5s;
+}
+
+.sec-two .cont-one > div:hover{
+    box-shadow: 0px 0px 20px 0px #a8a8a8de;
+    transform: translateY(-10px);
+}
+
+.sec-two .cont-one > div span{
+    color: var(--main-color);
+    font-size: 80px;
+}
+.sec-two .cont-one > div p{
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 2.6;
+}
+
+@media (max-width:1000px){
+    .sec-two .cont-one{
+        margin-top: 15px;
+        grid-template-columns: repeat(2,40%);
+    }
+}
+@media (max-width:480px){
+    .sec-two .cont-one{
+        grid-template-columns: repeat(1,90%);
+    }
+}
+
+
+.sec-three{
+    background-image: url(images/headphones_hero_2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+.sec-three > p{
+    margin-top: 50px;
+    max-width: 637px;
+    line-height: 2.6;
+    text-align: center;
+}
+.sec-three .cont-two{
+    display: grid;
+    justify-content:space-evenly;
+    grid-template-columns: repeat(4,190px);
+    padding: 20px;
+    gap: 60px;
+}
+
+.sec-three .cont-two > div{
+    text-align: center;
+    background-image: url(images/pentagone.png);
+    background-size: 190px;
+    background-repeat: no-repeat;
+    padding: 15px 25px;
+    border-radius: 6px;
+    transition: .5s;
+}
+.sec-three .cont-two > div h3{
+    margin-top: 45px;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+
+.sec-three .cont-two > div p{
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+@media (max-width:1000px){
+    .sec-three {
+        padding-bottom: 15px;
+    }
+    .sec-three .cont-two{
+        margin-top: 15px;
+        grid-template-columns: repeat(2,190px);
+    }
+    .sec-three > p{
+        padding: 15px;
+    }
+}
+@media (max-width:480px){
+    .sec-three .cont-two{
+        grid-template-columns: repeat(1,190px);
     }
 }

@@ -27,6 +27,7 @@ header{
     align-items: center;
     position: relative;
 }
+
 header > .list {
     display: none;
 }
@@ -46,9 +47,10 @@ header > .list {
  transition: .5s;
 }
 
-.home ul a:hover{
+.home ul > li a:hover{
 color: var(--main-color);
 opacity: var(--hover-ops);
+box-shadow: none;
 }
 
 .sec-one{
@@ -136,5 +138,66 @@ opacity: var(--hover-ops);
     }
     header .list:focus .two {
         transform: rotate(-135deg) translate(1px, 1px);
+    }
+}
+
+.sec-two{
+    background-color: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+h2{
+    margin-bottom: 0;
+    margin-top: 50px;
+}
+.sec-two > p{
+    margin-top: 50px;
+    max-width: 637px;
+    line-height: 2.6;
+    text-align: center;
+    padding: 15px;
+}
+.sec-two .cont-one{
+    display: grid;
+    justify-content:space-evenly;
+    grid-template-columns: repeat(4,20%);
+    padding: 20px;
+    gap: 20px;
+}
+
+.sec-two .cont-one > div{
+    text-align: center;
+    padding: 15px 25px;
+    border-radius: 6px;
+    transition: .5s;
+}
+
+.sec-two .cont-one > div:hover{
+    box-shadow: 0px 0px 20px 0px #a8a8a8de;
+    transform: translateY(-10px);
+}
+
+.sec-two .cont-one > div span{
+    color: var(--main-color);
+    font-size: 80px;
+}
+.sec-two .cont-one > div p{
+    font-size: 14px;
+    margin-top: 15px;
+    line-height: 2.6;
+}
+
+@media (max-width:1000px){
+    .sec-two .cont-one{
+        margin-top: 15px;
+        grid-template-columns: repeat(2,40%);
+    }
+}
+@media (max-width:480px){
+    .sec-two .cont-one{
+        grid-template-columns: repeat(1,90%);
     }
 }
